@@ -10,15 +10,15 @@ export default function NotFound() {
       <main className="flex-1 flex items-center justify-center py-20">
         <div className="container text-center">
           <h1 className="heading-display mb-4">404</h1>
-          <h2 className="heading-lg mb-4">Page Not Found</h2>
+          <h2 className="heading-lg mb-4">Sidan Hittades Inte</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-md mx-auto">
-            Sorry, the page you're looking for doesn't exist. Let's get you back on track.
+            Tyvärr, sidan du letar efter finns inte. Låt oss få dig tillbaka på rätt väg.
           </p>
           <Link
             href="/"
             className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:shadow-lg transition-all duration-300"
           >
-            Go Back Home
+            Gå Tillbaka Till Hem
           </Link>
         </div>
       </main>

@@ -44,9 +44,9 @@ export default function Contact() {
         {/* Header Section */}
         <section className="py-16 md:py-24 bg-gradient-to-br from-background via-background to-secondary">
           <div className="container">
-            <h1 className="heading-display mb-4">Get In Touch</h1>
+            <h1 className="heading-display mb-4">Kom I Kontakt</h1>
             <p className="text-lg text-muted-foreground max-w-2xl">
-              Have questions about programming languages? Want to share your experience? We'd love to hear from you!
+              Har du frågor om programmeringsspråk? Vill du dela dina erfarenheter? Vi skulle älska att höra från dig!
             </p>
           </div>
         </section>
@@ -61,25 +61,11 @@ export default function Contact() {
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Mail className="text-primary" size={24} />
                   </div>
-                  <h3 className="font-semibold">Email</h3>
+                  <h3 className="font-semibold">E-post</h3>
                 </div>
                 <p className="text-muted-foreground">
-                  <a href="mailto:info@prolang.dev" className="hover:text-primary transition-colors">
-                    info@prolang.dev
-                  </a>
-                </p>
-              </article>
-
-              <article className="bg-card p-6 rounded-lg border border-border">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Phone className="text-primary" size={24} />
-                  </div>
-                  <h3 className="font-semibold">Phone</h3>
-                </div>
-                <p className="text-muted-foreground">
-                  <a href="tel:+1234567890" className="hover:text-primary transition-colors">
-                    +1 (234) 567-890
+                  <a href="mailto:TRX@live.se" className="hover:text-primary transition-colors">
+                    TRX@live.se
                   </a>
                 </p>
               </article>
@@ -89,11 +75,24 @@ export default function Contact() {
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <MapPin className="text-primary" size={24} />
                   </div>
-                  <h3 className="font-semibold">Location</h3>
+                  <h3 className="font-semibold">Plats</h3>
                 </div>
                 <p className="text-muted-foreground">
-                  San Francisco, CA<br />
-                  United States
+                  Gävleborgs län<br />
+                  Sverige
+                </p>
+              </article>
+
+              <article className="bg-card p-6 rounded-lg border border-border">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Send className="text-primary" size={24} />
+                  </div>
+                  <h3 className="font-semibold">Rallies Universe</h3>
+                </div>
+                <p className="text-muted-foreground">
+                  Ditt varumärke för<br />
+                  programmeringsspr\u00e5k
                 </p>
               </article>
             </div>
@@ -101,13 +100,13 @@ export default function Contact() {
             {/* Contact Form */}
             <div className="max-w-2xl mx-auto">
               <div className="bg-card border border-border rounded-lg p-8">
-                <h2 className="heading-md mb-6">Send us a Message</h2>
+                <h2 className="heading-md mb-6">Skicka Ett Meddelande</h2>
 
                 {submitted ? (
                   <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
-                    <h3 className="font-semibold text-green-900 mb-2">Thank You!</h3>
+                    <h3 className="font-semibold text-green-900 mb-2">Tack!</h3>
                     <p className="text-green-700">
-                      Your message has been received. We'll get back to you soon!
+                      Ditt meddelande har mottagits. Vi kontaktar dig snart!
                     </p>
                   </div>
                 ) : (
@@ -115,7 +114,7 @@ export default function Contact() {
                     {/* Name Field */}
                     <div>
                       <label htmlFor="name" className="block font-medium mb-2">
-                        Full Name *
+                        Fullständigt Namn *
                       </label>
                       <input
                         type="text"
@@ -132,7 +131,7 @@ export default function Contact() {
                     {/* Email Field */}
                     <div>
                       <label htmlFor="email" className="block font-medium mb-2">
-                        Email Address *
+                        E-postadress *
                       </label>
                       <input
                         type="email"
@@ -149,7 +148,7 @@ export default function Contact() {
                     {/* Subject Field */}
                     <div>
                       <label htmlFor="subject" className="block font-medium mb-2">
-                        Subject *
+                        Ämne *
                       </label>
                       <select
                         id="subject"
@@ -159,18 +158,18 @@ export default function Contact() {
                         required
                         className="w-full px-4 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
                       >
-                        <option value="">Select a subject</option>
-                        <option value="question">General Question</option>
+                        <option value="">Välj ett ämne</option>
+                        <option value="question">Allmän Fråga</option>
                         <option value="feedback">Feedback</option>
-                        <option value="suggestion">Suggestion</option>
-                        <option value="other">Other</option>
+                        <option value="suggestion">Förslag</option>
+                        <option value="other">Annat</option>
                       </select>
                     </div>
 
                     {/* Message Field */}
                     <div>
                       <label htmlFor="message" className="block font-medium mb-2">
-                        Message *
+                        Meddelande *
                       </label>
                       <textarea
                         id="message"
@@ -180,14 +179,14 @@ export default function Contact() {
                         required
                         rows={5}
                         className="w-full px-4 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-                        placeholder="Your message here..."
+                        placeholder="Ditt meddelande här..."
                       />
                     </div>
 
                     {/* File Upload */}
                     <div>
                       <label htmlFor="file" className="block font-medium mb-2">
-                        Attach File (Optional)
+                        Bifoga Fil (Valfritt)
                       </label>
                       <input
                         type="file"
@@ -199,7 +198,7 @@ export default function Contact() {
                       />
                       {formData.file && (
                         <p className="text-sm text-muted-foreground mt-2">
-                          Selected: {formData.file.name}
+                          Vald: {formData.file.name}
                         </p>
                       )}
                     </div>
@@ -209,7 +208,7 @@ export default function Contact() {
                       type="submit"
                       className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:shadow-lg transition-all duration-300"
                     >
-                      Send Message <Send size={18} />
+                      Skicka Meddelande <Send size={18} />
                     </button>
                   </form>
                 )}
@@ -221,35 +220,35 @@ export default function Contact() {
         {/* FAQ Section */}
         <section className="py-16 md:py-24 bg-secondary">
           <div className="container">
-            <h2 className="heading-lg mb-8">Frequently Asked Questions</h2>
+            <h2 className="heading-lg mb-8">Vanliga Frågor</h2>
             <div className="space-y-6 max-w-2xl">
               <details className="bg-card p-6 rounded-lg border border-border cursor-pointer group">
                 <summary className="font-semibold flex items-center justify-between">
-                  What programming language should I learn first?
+                  Vilket programmeringsspråk bör jag lära mig först?
                   <span className="text-primary group-open:rotate-180 transition-transform">▼</span>
                 </summary>
                 <p className="text-muted-foreground mt-4">
-                  Python is an excellent choice for beginners due to its readable syntax and extensive resources. JavaScript is also great if you're interested in web development.
+                  Python är ett utmärkt val för nybörjare på grund av dess läsbara syntax och omfattande resurser. JavaScript är också bra om du är intresserad av webbutveckling.
                 </p>
               </details>
 
               <details className="bg-card p-6 rounded-lg border border-border cursor-pointer group">
                 <summary className="font-semibold flex items-center justify-between">
-                  How long does it take to learn a programming language?
+                  Hur lång tid tar det att lära sig ett programmeringsspråk?
                   <span className="text-primary group-open:rotate-180 transition-transform">▼</span>
                 </summary>
                 <p className="text-muted-foreground mt-4">
-                  It typically takes 3-6 months to learn the basics of a programming language with consistent practice. Mastery takes years of experience.
+                  Det tar vanligtvis 3-6 månader att lära sig grunderna i ett programmeringsspråk med konsekvent övning. Att bli skicklig tar många års erfarenhet.
                 </p>
               </details>
 
               <details className="bg-card p-6 rounded-lg border border-border cursor-pointer group">
                 <summary className="font-semibold flex items-center justify-between">
-                  Should I learn multiple programming languages?
+                  Bör jag lära mig flera programmeringsspråk?
                   <span className="text-primary group-open:rotate-180 transition-transform">▼</span>
                 </summary>
                 <p className="text-muted-foreground mt-4">
-                  Yes! Learning multiple languages expands your problem-solving skills and makes you a more versatile developer. Different languages excel at different tasks.
+                  Ja! Att lära sig flera språk utökar dina problemlösningsförmågor och gör dig en mer mångsidig utvecklare. Olika språk är bra på olika uppgifter.
                 </p>
               </details>
             </div>

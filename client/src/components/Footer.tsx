@@ -9,34 +9,34 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* About Section */}
           <section>
-            <h3 className="heading-md mb-4">About ProLang</h3>
+            <h3 className="heading-md mb-4">Om Rallies Universe</h3>
             <p className="text-muted-foreground">
-              A comprehensive guide to popular programming languages, their features, and communities.
+              En omfattande guide till populära programmeringsspråk, deras funktioner och gemenskaper.
             </p>
           </section>
 
           {/* Quick Links */}
           <section>
-            <h3 className="heading-md mb-4">Quick Links</h3>
+            <h3 className="heading-md mb-4">Snabblänkar</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="text-muted-foreground hover:text-primary transition-colors">
-                  Home
+                  Hem
                 </Link>
               </li>
               <li>
                 <Link href="/languages" className="text-muted-foreground hover:text-primary transition-colors">
-                  Languages
+                  Språk
                 </Link>
               </li>
               <li>
                 <Link href="/comparison" className="text-muted-foreground hover:text-primary transition-colors">
-                  Comparison
+                  Jämförelse
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
-                  Contact
+                  Kontakt
                 </Link>
               </li>
             </ul>
@@ -44,7 +44,7 @@ export default function Footer() {
 
           {/* Resources */}
           <section>
-            <h3 className="heading-md mb-4">Resources</h3>
+            <h3 className="heading-md mb-4">Resurser</h3>
             <ul className="space-y-2">
               <li>
                 <a
@@ -84,10 +84,10 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            © {currentYear} ProLang Portfolio. All rights reserved.
+            © {currentYear} Rallies Universe. Alla rättigheter förbehållna.
           </p>
           <p className="text-muted-foreground text-sm mt-4 md:mt-0">
-            Built with semantic HTML, accessibility, and responsiveness in mind.
+            Byggt med semantisk HTML, tillgänglighet och responsiv design i fokus.
           </p>
         </div>
       </div>

@@ -21,23 +21,23 @@ export default function Home() {
           <div className="container">
             <div className="max-w-3xl">
               <h1 className="heading-display mb-6 leading-tight">
-                Explore Programming Languages
+                Utforska Programmeringsspråk
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-                Discover the features, use cases, and communities behind the world's most popular programming languages. From Python to Rust, find the right language for your next project.
+                Upptäck funktionerna, användningsområdena och gemenskaperna bakom världens mest populära programmeringsspråk. Från Python till Rust, hitta rätt språk för ditt nästa projekt.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/languages"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:shadow-lg hover:scale-105 transition-all duration-300"
                 >
-                  Explore Languages <ArrowRight size={20} />
+                  Utforska Språk <ArrowRight size={20} />
                 </Link>
                 <Link
                   href="/comparison"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-primary text-primary rounded-lg font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                 >
-                  Compare Languages
+                  Jämför Språk
                 </Link>
               </div>
             </div>
@@ -47,7 +47,7 @@ export default function Home() {
         {/* Featured Languages Section */}
         <section className="py-16 md:py-24">
           <div className="container">
-            <h2 className="heading-lg mb-12 text-center">Featured Languages</h2>
+            <h2 className="heading-lg mb-12 text-center">Utvalda Språk</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {featuredLanguages.map((lang) => (
                 <div
@@ -61,13 +61,13 @@ export default function Home() {
                   <div className="text-4xl mb-4">{lang.icon}</div>
                   <h3 className="heading-md mb-2">{lang.name}</h3>
                   <p className="text-muted-foreground mb-4">
-                    Discover what makes {lang.name} special and why developers love it.
+                    Upptäck vad som gör {lang.name} speciellt och varför utvecklare älskar det.
                   </p>
                   <Link
                     href="/languages"
                     className="inline-flex items-center gap-2 text-primary font-medium group-hover:gap-3 transition-all"
                   >
-                    Learn More <ArrowRight size={16} />
+                    Läs Mer <ArrowRight size={16} />
                   </Link>
                 </div>
               ))}
@@ -78,41 +78,41 @@ export default function Home() {
         {/* Why Choose Section */}
         <section className="py-16 md:py-24 bg-secondary">
           <div className="container">
-            <h2 className="heading-lg mb-12">Why Learn Programming Languages?</h2>
+            <h2 className="heading-lg mb-12">Varför Lära Sig Programmeringsspråk?</h2>
             <ul className="space-y-4 max-w-2xl">
               <li className="flex gap-4">
                 <span className="text-primary font-bold text-xl flex-shrink-0">✓</span>
                 <div>
-                  <h3 className="font-semibold mb-2">Expand Your Skills</h3>
+                  <h3 className="font-semibold mb-2">Utöka Dina Färdigheter</h3>
                   <p className="text-muted-foreground">
-                    Learning multiple languages makes you a more versatile and valuable developer.
+                    Att lära sig flera språk gör dig en mer mångsidig och värdefull utvecklare.
                   </p>
                 </div>
               </li>
               <li className="flex gap-4">
                 <span className="text-primary font-bold text-xl flex-shrink-0">✓</span>
                 <div>
-                  <h3 className="font-semibold mb-2">Solve Different Problems</h3>
+                  <h3 className="font-semibold mb-2">Lösa Olika Problem</h3>
                   <p className="text-muted-foreground">
-                    Different languages excel at different tasks. Choose the right tool for the job.
+                    Olika språk är bra på olika uppgifter. Välj rätt verktyg för jobbet.
                   </p>
                 </div>
               </li>
               <li className="flex gap-4">
                 <span className="text-primary font-bold text-xl flex-shrink-0">✓</span>
                 <div>
-                  <h3 className="font-semibold mb-2">Join Communities</h3>
+                  <h3 className="font-semibold mb-2">Gå Med i Gemenskaper</h3>
                   <p className="text-muted-foreground">
-                    Each language has a vibrant community ready to help and collaborate.
+                    Varje språk har en levande gemenskap redo att hjälpa och samarbeta.
                   </p>
                 </div>
               </li>
               <li className="flex gap-4">
                 <span className="text-primary font-bold text-xl flex-shrink-0">✓</span>
                 <div>
-                  <h3 className="font-semibold mb-2">Career Opportunities</h3>
+                  <h3 className="font-semibold mb-2">Karriärmöjligheter</h3>
                   <p className="text-muted-foreground">
-                    Multi-language proficiency opens doors to more job opportunities.
+                    Flerspråkig kompetens öppnar dörrar till fler jobbmöjligheter.
                   </p>
                 </div>
               </li>
@@ -123,15 +123,15 @@ export default function Home() {
         {/* CTA Section */}
         <section className="py-16 md:py-24">
           <div className="container text-center">
-            <h2 className="heading-lg mb-6">Ready to Get Started?</h2>
+            <h2 className="heading-lg mb-6">Redo att Komma Igång?</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Browse our comprehensive guide to programming languages and find your next favorite.
+              Bläddra genom vår omfattande guide till programmeringsspråk och hitta ditt nästa favorit.
             </p>
             <Link
               href="/languages"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-lg font-medium hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
-              Start Exploring <ArrowRight size={20} />
+              Börja Utforska <ArrowRight size={20} />
             </Link>
           </div>
         </section>

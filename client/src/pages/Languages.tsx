@@ -109,9 +109,9 @@ export default function Languages() {
         {/* Header Section */}
         <section className="py-16 md:py-24 bg-gradient-to-br from-background via-background to-secondary">
           <div className="container">
-            <h1 className="heading-display mb-4">Programming Languages</h1>
+            <h1 className="heading-display mb-4">Programmeringsspråk</h1>
             <p className="text-lg text-muted-foreground max-w-2xl">
-              Explore detailed information about the world's most popular programming languages, their features, use cases, and communities.
+              Utforska detaljerad information om världens mest populära programmeringsspråk, deras funktioner, användningsområden och gemenskaper.
             </p>
           </div>
         </section>
@@ -151,18 +151,18 @@ export default function Languages() {
                     {/* Info List */}
                     <div className="grid grid-cols-2 gap-4 text-sm">
                       <div>
-                        <p className="text-muted-foreground font-medium">Created</p>
+                        <p className="text-muted-foreground font-medium">Skapad</p>
                         <p className="font-semibold">{lang.year}</p>
                       </div>
                       <div>
-                        <p className="text-muted-foreground font-medium">Creator</p>
+                        <p className="text-muted-foreground font-medium">Skapare</p>
                         <p className="font-semibold">{lang.creator}</p>
                       </div>
                     </div>
 
                     {/* Use Cases - Unordered List */}
                     <div>
-                      <h3 className="font-semibold mb-3">Common Use Cases</h3>
+                      <h3 className="font-semibold mb-3">Vanliga Användningsområden</h3>
                       <ul className="space-y-2">
                         {lang.uses.map((use) => (
                           <li key={use} className="flex items-center gap-2 text-sm">
@@ -178,7 +178,7 @@ export default function Languages() {
 
                     {/* Features - Ordered List */}
                     <div>
-                      <h3 className="font-semibold mb-3">Key Features</h3>
+                      <h3 className="font-semibold mb-3">Huvudfunktioner</h3>
                       <ol className="space-y-2 list-decimal list-inside">
                         {lang.features.map((feature) => (
                           <li key={feature} className="text-sm text-muted-foreground">
@@ -190,12 +190,12 @@ export default function Languages() {
 
                     {/* Embedded Video */}
                     <div>
-                      <h3 className="font-semibold mb-3">Learn More</h3>
+                      <h3 className="font-semibold mb-3">Läs Mer</h3>
                       <div className="relative w-full pt-[56.25%] bg-secondary rounded-lg overflow-hidden">
                         <iframe
                           className="absolute inset-0 w-full h-full"
                           src={`https://www.youtube.com/embed/${lang.videoId}`}
-                          title={`${lang.name} Introduction`}
+                          title={`${lang.name} Introduktion`}
                           allowFullScreen
                           loading="lazy"
                         />

@@ -6,10 +6,10 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { label: "Home", href: "/" },
-    { label: "Languages", href: "/languages" },
-    { label: "Comparison", href: "/comparison" },
-    { label: "Contact", href: "/contact" },
+    { label: "Hem", href: "/" },
+    { label: "Språk", href: "/languages" },
+    { label: "Jämförelse", href: "/comparison" },
+    { label: "Kontakt", href: "/contact" },
   ];
 
   return (
@@ -19,7 +19,7 @@ export default function Navigation() {
           <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
             <span className="text-white font-bold text-sm">&lt;/&gt;</span>
           </div>
-          <span className="font-bold text-lg hidden sm:inline">ProLang</span>
+          <span className="font-bold text-lg hidden sm:inline">Rallies Universe</span>
         </Link>
 
         {/* Desktop Menu */}
@@ -40,8 +40,8 @@ export default function Navigation() {
         <button
           className="md:hidden p-2 hover:bg-secondary rounded-lg transition-colors"
           onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-          aria-expanded={isOpen}
+        aria-label="Slå på/av meny"
+        aria-expanded={isOpen}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
