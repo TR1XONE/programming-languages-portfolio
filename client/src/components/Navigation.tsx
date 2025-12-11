@@ -9,6 +9,7 @@ export default function Navigation() {
     { label: "Hem", href: "/" },
     { label: "Språk", href: "/languages" },
     { label: "Jämförelse", href: "/comparison" },
+    { label: "Blog", href: "/blog" },
     { label: "Kontakt", href: "/contact" },
   ];
 
