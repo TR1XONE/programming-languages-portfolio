@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
-import { Calendar, User, ArrowRight } from "lucide-react";
+import { Calendar, User, ArrowRight, Share2 } from "lucide-react";
 
 export default function Blog() {
   const articles = [
@@ -113,9 +113,40 @@ export default function Blog() {
                     </div>
                     <span>{articles[0].readTime}</span>
                   </div>
-                  <button className="inline-flex items-center gap-2 px-6 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:shadow-lg transition-all duration-300">
-                    Läs Artikeln <ArrowRight size={18} />
-                  </button>
+                  <div className="flex items-center gap-3">
+                    <button className="inline-flex items-center gap-2 px-6 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:shadow-lg transition-all duration-300">
+                      Läs Artikeln <ArrowRight size={18} />
+                    </button>
+                    <div className="flex gap-2">
+                      <a
+                        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(articles[0].title)}&url=https://rallies-universe.com/blog/${articles[0].id}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 bg-[#1DA1F2] text-white rounded-lg hover:shadow-lg transition-all duration-300"
+                        title="Dela på Twitter"
+                      >
+                        𝕏
+                      </a>
+                      <a
+                        href={`https://www.linkedin.com/sharing/share-offsite/?url=https://rallies-universe.com/blog/${articles[0].id}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 bg-[#0A66C2] text-white rounded-lg hover:shadow-lg transition-all duration-300"
+                        title="Dela på LinkedIn"
+                      >
+                        in
+                      </a>
+                      <a
+                        href={`https://www.facebook.com/sharer/sharer.php?u=https://rallies-universe.com/blog/${articles[0].id}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 bg-[#1877F2] text-white rounded-lg hover:shadow-lg transition-all duration-300"
+                        title="Dela på Facebook"
+                      >
+                        f
+                      </a>
+                    </div>
+                  </div>
                 </div>
                 <div className="flex items-center justify-center">
                   <div
@@ -169,10 +200,41 @@ export default function Blog() {
                       <span>{article.readTime}</span>
                     </div>
 
-                    {/* Read More Link */}
-                    <button className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all">
-                      Läs Mer <ArrowRight size={16} />
-                    </button>
+                    {/* Read More Link and Social Sharing */}
+                    <div className="flex items-center justify-between">
+                      <button className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all">
+                        Läs Mer <ArrowRight size={16} />
+                      </button>
+                      <div className="flex gap-2">
+                        <a
+                          href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(article.title)}&url=https://rallies-universe.com/blog/${article.id}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-1.5 bg-[#1DA1F2] text-white rounded hover:shadow-md transition-all duration-300 text-xs"
+                          title="Dela på Twitter"
+                        >
+                          𝕏
+                        </a>
+                        <a
+                          href={`https://www.linkedin.com/sharing/share-offsite/?url=https://rallies-universe.com/blog/${article.id}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-1.5 bg-[#0A66C2] text-white rounded hover:shadow-md transition-all duration-300 text-xs"
+                          title="Dela på LinkedIn"
+                        >
+                          in
+                        </a>
+                        <a
+                          href={`https://www.facebook.com/sharer/sharer.php?u=https://rallies-universe.com/blog/${article.id}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-1.5 bg-[#1877F2] text-white rounded hover:shadow-md transition-all duration-300 text-xs"
+                          title="Dela på Facebook"
+                        >
+                          f
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </article>
               ))}
