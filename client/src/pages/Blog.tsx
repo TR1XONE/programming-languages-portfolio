@@ -2,76 +2,10 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
 import { Calendar, User, ArrowRight, Share2 } from "lucide-react";
+import { articles } from "@/lib/articleData";
 
 export default function Blog() {
-  const articles = [
-    {
-      id: 1,
-      title: "Kom Igång Med Python - En Nybörjarguide",
-      excerpt: "Lär dig grunderna i Python och skapa ditt första program på mindre än en timme.",
-      content: "Python är ett utmärkt val för nybörjare. I denna guide kommer vi att täcka variabler, datatyper, loopar och funktioner.",
-      author: "Rallies Universe",
-      date: "2025-12-10",
-      category: "Python",
-      color: "#3776ab",
-      readTime: "8 min",
-    },
-    {
-      id: 2,
-      title: "JavaScript ES6 - Moderna Funktioner Du Måste Känna Till",
-      excerpt: "Utforska de senaste JavaScript-funktionerna som gör koden mer elegant och läsbar.",
-      content: "ES6 introducerade många nya funktioner som arrow functions, destructuring, och template literals. Låt oss dyka in i dessa koncept.",
-      author: "Rallies Universe",
-      date: "2025-12-08",
-      category: "JavaScript",
-      color: "#f7df1e",
-      readTime: "12 min",
-    },
-    {
-      id: 3,
-      title: "Rust Ownership System - Förklarat Enkelt",
-      excerpt: "Förstå Rusts unika ownership-system och varför det gör Rust så säkert.",
-      content: "Ownership är en av de viktigaste koncepten i Rust. Det säkerställer minnessäkerhet utan garbage collection.",
-      author: "Rallies Universe",
-      date: "2025-12-05",
-      category: "Rust",
-      color: "#ce422b",
-      readTime: "15 min",
-    },
-    {
-      id: 4,
-      title: "Go Goroutines - Parallell Programmering Gjord Enkelt",
-      excerpt: "Lär dig hur du använder goroutines för att skriva effektiv parallell kod i Go.",
-      content: "Goroutines är en av Go:s mest kraftfulla funktioner. De gör det enkelt att skriva concurrent kod.",
-      author: "Rallies Universe",
-      date: "2025-12-03",
-      category: "Go",
-      color: "#00add8",
-      readTime: "10 min",
-    },
-    {
-      id: 5,
-      title: "Java Spring Boot - Bygga REST API:er",
-      excerpt: "Skapa en fullständig REST API med Spring Boot på bara några minuter.",
-      content: "Spring Boot förenklar utvecklingen av Java-applikationer. Vi kommer att bygga en komplett API från grunden.",
-      author: "Rallies Universe",
-      date: "2025-12-01",
-      category: "Java",
-      color: "#007396",
-      readTime: "14 min",
-    },
-    {
-      id: 6,
-      title: "C++ Templates - Generisk Programmering",
-      excerpt: "Bemästra C++ templates och skriv återanvändbar, typ-säker kod.",
-      content: "Templates är ett kraftfullt verktyg i C++ för att skriva generisk kod som fungerar med olika datatyper.",
-      author: "Rallies Universe",
-      date: "2025-11-29",
-      category: "C++",
-      color: "#00599c",
-      readTime: "16 min",
-    },
-  ];
+
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -114,9 +48,9 @@ export default function Blog() {
                     <span>{articles[0].readTime}</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <button className="inline-flex items-center gap-2 px-6 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:shadow-lg transition-all duration-300">
-                      Läs Artikeln <ArrowRight size={18} />
-                    </button>
+                  <Link href={`/blog/${articles[0].id}`} className="inline-flex items-center gap-2 px-6 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:shadow-lg transition-all duration-300">
+                    Läs Artikeln <ArrowRight size={18} />
+                  </Link>
                     <div className="flex gap-2">
                       <a
                         href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(articles[0].title)}&url=https://rallies-universe.com/blog/${articles[0].id}`}
@@ -202,9 +136,9 @@ export default function Blog() {
 
                     {/* Read More Link and Social Sharing */}
                     <div className="flex items-center justify-between">
-                      <button className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all">
+                      <Link href={`/blog/${article.id}`} className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all">
                         Läs Mer <ArrowRight size={16} />
-                      </button>
+                      </Link>
                       <div className="flex gap-2">
                         <a
                           href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(article.title)}&url=https://rallies-universe.com/blog/${article.id}`}
